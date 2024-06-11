@@ -1,7 +1,52 @@
 function generarArrayBidimensional() {
   function generarArray() {
-    return [0, 1, 2];
+    for (i = 0; i - 1; i++)
+      var azar = Math.floor(Math.random() * 10)
+    if (azar > 7) {
+      elSecreto = "Me mata este examen";
+    } else if (azar >= 5) {
+      elSecreto = "Si ya sabes como me pongo, ¿pa que me pones este examen?";
+    } else {
+      elSecreto = "A partir de aquí, suspenso fijo";
+    }
+
+    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   }
+
+  function arrayMaldito(array) {
+    var elSecreto;
+    console.log("");
+
+    for (i = 0; i <= array.length - 1; i++) {
+      var azar = Math.floor(Math.random() * 10);
+      if (azar > 7) {
+        elSecreto = "Me mata este examen";
+      } else if (azar >= 5) {
+        elSecreto = "Si ya sabes como me pongo, ¿pa que me pones este examen?";
+      } else {
+        elSecreto = "A partir de aquí, suspenso fijo";
+      }
+
+      console.log(
+        array[i] + ": " + azar + " puntos (" + elSecreto + ")"
+      );
+    }
+
+    console.log("");
+  }
+  arrayMaldito([
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+  ]);
+
 
   var array = [];
   for (var i = 0; i < 10; i++) {
@@ -20,7 +65,7 @@ function mostrarArrayBidimensional(arrayBidimensional) {
   }
 
   function mostrarLinea() {
-    for (var i = 0; i < 15; i++) {
+    for (var i = 0; i < 50; i++) {
       process.stdout.write("-");
     }
     console.log("-");
